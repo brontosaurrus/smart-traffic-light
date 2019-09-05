@@ -1,3 +1,6 @@
+
+
+
 const awsIot = require('aws-iot-device-sdk');
 
 const device = awsIot.device({
@@ -18,7 +21,6 @@ device.on('connect', () => {
         device.subscribe('ChangeState');
     }
 );
-
 
 
 device.on('message', (topic , payload ) => {
